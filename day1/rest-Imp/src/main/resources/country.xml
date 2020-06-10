@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean id="in" class="com.cognizant.controller.Country" scope="prototype"><property name="code" value="IN" /><property name="name" value="India" /></bean>
+    <bean id="us" class="com.cognizant.controller.Country" scope="prototype"><property name="code" value="US" /><property name="name" value="United States" /></bean>
+    <bean id="uk" class="com.cognizant.controller.Country" scope="prototype"><property name="code" value="UK" /><property name="name" value="United Kingdom" /></bean>
+    <bean id="ger" class="com.cognizant.controller.Country" scope="prototype"><property name="code" value="Ger" /><property name="name" value="Germany" /></bean>
+    
+    <bean id="countryList" class="java.util.ArrayList">
+    <constructor-arg>
+    <list>
+    <ref bean="in"></ref>
+    <ref bean="us"></ref>
+    <ref bean="uk"></ref>
+    <ref bean="ger"></ref>
+    </list>
+    </constructor-arg>
+    </bean>
+</beans>
