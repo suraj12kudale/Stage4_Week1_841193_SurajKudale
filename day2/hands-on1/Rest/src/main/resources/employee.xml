@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean id="Emp1" class="com.cts.Rest.model.Employee"><property name="id" value="100" /><property name="first" value="Suraj" /><property name="last" value="Kudale"/></bean>
+    <bean id="Emp2" class="com.cts.Rest.model.Employee"><property name="id" value="101" /><property name="first" value="Umesh" /><property name="last" value="Kudale"/></bean>
+    <bean id="Emp3" class="com.cts.Rest.model.Employee"><property name="id" value="102" /><property name="first" value="Ajay" /><property name="last" value="Kudale"/></bean>
+    
+    <bean id="employeeList" class="java.util.ArrayList">
+    <constructor-arg>
+    <list>
+    <ref bean="Emp1"></ref>
+    <ref bean="Emp2"></ref>
+    <ref bean="Emp3"></ref>
+    </list>
+    </constructor-arg>
+    </bean>
+    
+    <bean id="Dep1" class="com.cts.Rest.model.Department"><property name="id" value="100" /><property name="name" value="Software" /></bean>
+    <bean id="Dep2" class="com.cts.Rest.model.Department"><property name="id" value="101" /><property name="name" value="Reasearch" /></bean>
+    <bean id="Dep3" class="com.cts.Rest.model.Department"><property name="id" value="102" /><property name="name" value="Sales" /></bean>
+    
+    <bean id="departmentList" class="java.util.ArrayList">
+    <constructor-arg>
+    <list>
+    <ref bean="Dep1"></ref>
+    <ref bean="Dep2"></ref>
+    <ref bean="Dep3"></ref>
+    </list>
+    </constructor-arg>
+    </bean>
+</beans>
